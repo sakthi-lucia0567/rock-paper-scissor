@@ -35,7 +35,26 @@ function generateComputerChoice() {
 }
 
 function getResult() {
-  if (computerChoice === userChoice) {
+  if (computerChoiceDisplay === userChoiceDisplay) {
     result = "IT's a draw";
   }
+  if (computerChoiceDisplay === "Rock" && userChoiceDisplay === "Paper") {
+    result = "IT's a Win..!";
+  }
+  if (computerChoiceDisplay === "Rock" && userChoiceDisplay === "Scissor") {
+    result = "IT's a Lose..!";
+  }
+  if (computerChoiceDisplay === "Paper" && userChoiceDisplay === "Rock") {
+    result = "IT's a Lose..!";
+  }
+  if (computerChoiceDisplay === "Paper" && userChoiceDisplay === "Scissor") {
+    result = "IT's a Win..!";
+  }
+  if (computerChoiceDisplay === "Scissor" && userChoiceDisplay === "Rock") {
+    result = "IT's a Win..!";
+  }
+  if (computerChoiceDisplay === "Scissor" && userChoiceDisplay === "Paper") {
+    result = "IT's a Lose..!";
+  }
+  finalResult.innerHTML = result;
 }
